@@ -6,19 +6,19 @@ class animal{
     int velocity;
 
     void show(){
-        System.out.println(this.name);
-        System.out.println(this.height);
-        System.out.println(this.weight);
-        System.out.println(this.velocity);
+        System.out.print("姓名:"+name);
+        System.out.print("  身高:"+height+"公尺");
+        System.out.print("  體重:"+weight+"公斤");
+        System.out.print("  速度:"+velocity+"公尺/分鐘  ");
     }
-    double distance1(int x,double y){
+    double distance1(int x,double y){//x為時間 y為加速度
 
-        return x*y*this.velocity;
+        return x*y*velocity;
     
     }
     double distance2(int x){
        
-        return x*this.velocity;
+        return x*velocity;
     }
 }
 public class A1113322_0324_1{
@@ -45,22 +45,22 @@ public class A1113322_0324_1{
         Animal[3].velocity=120;
         for(int i=0;i<4;i++){
             Animal[i].show();
-        }
-        for(int i=0;i<4;i++){
-            System.out.print("請輸入x值及y值:");
+            System.out.print("請輸入x值(時間)及y值(加速度):");
             Scanner sc = new Scanner(System.in);
             int x=sc.nextInt();
             double y=sc.nextDouble();
             if(y==0){
     
-                System.out.println("奔跑距離為:"+Animal[i].distance2(x));
+                System.out.println("奔跑距離為:"+Animal[i].distance2(x)+"公尺");
             }
             else{
                 
-                System.out.println("奔跑距離為:"+Animal[i].distance1(x,y));
+                System.out.println("奔跑距離為:"+Animal[i].distance1(x,y)+"公尺");
             }
-
         }
+        
+
+        
     }
     
 
